@@ -5,12 +5,14 @@ from src.log.logger import logger  # Use relative import; run as a module, not a
 
 
 def connect_redis(url: str) -> Redis | None:
+
     redis_client = Redis.from_url(url)
     redis_client.ping()
 
     logger.info("Connect Redis successfully")
 
     return redis_client
+
 
     
 REDIS_URL = os.getenv("REDIS_URL")

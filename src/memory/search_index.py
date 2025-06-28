@@ -58,5 +58,5 @@ long_term_memory_index = create_search_index(redis_client)
 if __name__ == "__main__":
     REDIS_URL = os.getenv("REDIS_URL")
 
-    redis_client = connect_redis(REDIS_URL)
-    search_index = create_search_index(redis_client)
+    # redis_client = connect_redis(REDIS_URL)
+    # search_index = create_search_index(redis_client)
